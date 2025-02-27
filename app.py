@@ -41,7 +41,7 @@ if st.button("Get Travel plan"):
                 ("human", "Find travel options from {source} to {destination} along with estimated costs.")
             ])
             
-            chat_model = ChatGoogleGenerativeAI(api_key="AIzaSyBwAxaTIxIHGZ9oiQRdvwbeRXQCDLjq724", model="gemini-2.0-flash-exp")
+            chat_model = ChatGoogleGenerativeAI(api_key="your_api_key", model="gemini-2.0-flash-exp")
             parser = StrOutputParser()
             chain = chat_template | chat_model | parser
             raw_input = {"source": source, "destination": destination}
